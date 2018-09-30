@@ -1,0 +1,35 @@
+/*
+Incrementz
+8/30/2018
+Description: Program will accept two whole numbers then divides them and prints the result.
+A subsequent set of calculations will represent the same division as a whole number and fractional.
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+	float fresult;
+	int  no1, no2, frac_whole, frac_remainder, frac_denominator;
+	
+	printf("Divide two whole numbers");
+	printf("\n");
+	printf("Enter number1 >");//asking for user input
+	scanf("%i", &no1);//user input stored in int variable
+	
+	printf("Enter number2 >");//asking for user input
+	scanf("%i", &no2);//user input stored in int variable
+	
+	fresult = (float)no1 / no2; //type casting. float to int stored in variable.
+	frac_whole = (int)fresult;  //type casting. int to float stored in variable.
+	frac_remainder = no1 % no2; //MOD operator % returns remainder of the division for int.
+    frac_denominator = no2; //original denominater represents the fractional part of the result.
+    
+	printf("\n");
+	printf("The floating point result is %f  \n \n", fresult);
+	printf("The fractional result is %i and %i/%i    \n", frac_whole, frac_remainder, frac_denominator);
+		
+	system("PAUSE");
+	return(0);
+}
